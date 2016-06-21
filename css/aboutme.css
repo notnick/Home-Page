@@ -1,0 +1,267 @@
+
+
+
+a{
+ text-decoration: none;
+ color: inherit;
+}
+a:hover{
+ text-decoration: none;
+ color: inherit;
+}
+
+
+
+
+
+.introduction-text{
+	text-align: center;
+}
+
+.introduction-text span{
+	font-family: 'Lato', sans-serif;
+	font-size: 1.5em;
+    line-height: 1.6em;
+    font-style: italic;
+
+
+}
+
+.aboutme-font-style{
+	font-family: 'Lato', sans-serif;
+}
+
+.specialised-img-box{
+	height: 180px;
+	width: auto;
+
+	margin-bottom: 10px;
+}
+
+.custom-bx{
+	background-image: url(../img/responsiveINV.png);
+
+       -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;         /* Generic*/
+   z-index: -1;
+}
+.concepting-bx{
+	background-image: url(../img/conceptINV.png);
+
+       -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;         /* Generic*/
+   z-index: -1;
+
+}
+.prototyping-bx{
+		background-image: url(../img/prototypingINV.png);
+
+       -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;         /* Generic*/
+   z-index: -1;
+
+}
+.learning-bx{
+		background-image: url(../img/learningINVx.png);
+
+       -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;         /* Generic*/
+   z-index: -1;
+
+}
+
+.text-center{
+	text-align: center;
+
+}
+.specialised-headline{
+	/*background-color: rgba(255, 0, 0, 0.3); */
+	font-family: 'Anonymous Pro';
+	font-size: 22px;
+
+
+}
+.specialised-description{
+	font-size: 16px;
+	line-height: 24px;
+}
+
+
+.delete{
+	height="180" width="70"
+	border-bottom: 5px solid black;
+	  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 999px){
+	.svg-helper{
+	height: 180px;
+	width: 100%;
+}
+
+.shape {
+
+  stroke-dasharray: 264 500;
+  stroke-dashoffset: -440;
+
+  stroke-width: 6px;
+  fill: transparent;
+  stroke: #19f6e8;
+  border-bottom: 5px solid black;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+
+.specialised-img-box:hover .shape {
+  stroke-width: 2px;
+
+  stroke-dashoffset: 0;
+  stroke-dasharray: 960;
+	}
+}
+
+@media (max-width: 800px){
+
+	.custom-bx{
+		border-bottom: 3px solid #19f6e8;
+	}
+	.concepting-bx{
+		border-bottom: 3px solid #19f6e8;
+	}
+	.prototyping-bx{
+		border-bottom: 3px solid #19f6e8;
+	}
+	.learning-bx{
+		border-bottom: 3px solid #19f6e8;
+	}
+}
+
+
+
+/****** FUN PICS */
+
+
+#instafeed {
+	width: 120%;
+  max-width:1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+.fun-text{
+	z-index: 3;
+	width: auto;
+	height: auto;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: center;
+}
+
+.fun-text p {
+	position: absolute;
+
+	font-size: 20px;
+	line-height: 30px;
+
+
+}
+@media (max-width: 768px){
+
+	.fun-text{
+		margin-top: 1px;
+			margin-left: 1px;
+	margin-right: 1px;
+	}
+	.fun-text p{
+
+		left: 0;
+		font-size: 14px;
+		padding-left: 0px;
+	    padding-right: 0px;
+	    line-height: 20px;
+	}
+
+}
+
+#instafeed a {
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+.insta-overlay{
+	margin-bottom: 65px;
+}
+
+.footer-background {
+
+	width: auto;
+	overflow: hidden;
+	height: 300px;
+	background-color: rgba(31, 35, 36, 0.36);
+
+}
+
+.footer-background img{
+	opacity: 0.2;
+	z-index: 66;
+
+}
+
+.footer-background a{
+	 pointer-events: none;
+   cursor: default;
+}
+
+.fun-text a{
+	pointer-events: auto;
+	cursor:auto;
+	text-decoration: none;
+ color: inherit;
+}
+.fun-text a:hover{
+	color: #19f6e8;
+}
+
+#instafeed {
+
+	position: relative;
+	left: 0;
+	top: 0;
+	animation-name: back;
+	animation-duration: 50s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes back {
+	0% {
+		left: 0%;
+	}
+	50% {
+		left: -100%;
+	}
+	100% {
+		left: 0%;
+	}
+}

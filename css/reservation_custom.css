@@ -1,0 +1,120 @@
+
+.reservation-only{
+  font-family: 'Comfortaa', cursive;
+  font-weight: 400; 
+  letter-spacing: 1px;
+
+  background-image: url(../img/reservation-bg-minions2.png);
+
+        -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;         /* Generic*/
+   z-index: -1;
+}
+
+.reservation-heading h2{
+	font-size: 30px;
+	border-bottom: 2px solid #F2563E;
+}
+
+.reservation-heading h3{
+	font-size: 24px;	
+}
+
+.reservation-txt{
+   font-size: 25px;
+   text-align: center; 
+}
+@media (max-width: 767px) { 
+  .reservation-txt {
+    font-size: 15px;
+  }
+
+}
+
+/* FORM STYLE */ 
+
+.form{
+
+    padding: 15px;
+    background:#f8f8f8;
+    border:1px solid rgba(0, 0, 0, 0.075);
+    margin-bottom:25px;
+    color:#727272 !important;
+    font-size:18px;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+  
+
+  .form:hover{
+    border:1px solid #ff9210;
+  }
+
+  .form:focus{
+    color: white;
+    outline: none;
+    border:1px solid #ff9210;
+  }
+
+  
+/* Generic Button Styles */
+
+  .button{
+    padding:8px 12px;
+    background:#0A5175;
+    display: block;
+    width:120px;
+    margin:10px 0 0px 0;
+    border-radius:3px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align:center;
+    font-size:0.8em;
+    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  }
+
+  .button:hover{
+    background:#8BC3A3;
+    color:white;
+  }
+
+/* Send Button Styles */
+
+  .form-btn{
+    width:180px;
+    display: block;
+    height: auto;
+    padding:15px;
+    color:#fff;
+    background:#ff9210;
+    border:none;
+    border-radius:3px;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin:auto;
+    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+
+    margin-bottom: 10px;
+  }
+
+  .form-btn:hover{
+    background:#E22F14;
+    color: white;
+    border:none;
+  }
+
+  .form-btn:active{
+    opacity: 0.9;
+  }
+
+  /* END OF FORM STYLE */ 

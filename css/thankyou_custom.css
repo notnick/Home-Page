@@ -1,0 +1,24 @@
+
+.thankyou-only{
+	
+	height: 100%;
+	min-height: 500px;
+
+}
+
+.thankyou-heading{
+		font-size: 30px;
+	border-bottom: 2px solid #F2563E;
+
+}
+
+.thankyou-center{
+	text-align: center;
+}
+
+
+
+.glyphicon-heart-empty{
+	color: red;
+	font-size: 105px;
+}
