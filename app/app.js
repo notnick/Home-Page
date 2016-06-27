@@ -1,32 +1,42 @@
 
+var app = angular.module('homepage',['ngRoute','angularCSS']);
 
-var app = angular.module('homepage',['ngRoute']);
 
 app.config(['$routeProvider',function($routeProvider){
     $routeProvider
     .when('/',{
-        templateUrl: 'pages/home.html',
-        controller : 'mainController'
-    })
-    .when('/#',{
-      templateUrl: 'pages/home.html',
-      controller : 'mainController'
+        templateUrl: 'views/home.html',
+        controller : 'mainController',
+        css : 'css/home.css'
     })
     .when('/about',{
-        templateUrl : 'pages/about.html',
-        controller : 'aboutController'
+        templateUrl : 'views/about.html',
+        controller : 'aboutController',
+        css : 'css/about.css'
     })
     .when('/contact',{
-        templateUrl : 'pages/contact.html',
-        controller : 'contactController'
+        templateUrl : 'views/contact.html',
+        controller : 'contactController',
+        css : 'css/contact.css'
     })
     .when('/portfolio',{
-        templateUrl : 'pages/portfolio.html',
-        controller : 'portfolioController'
+        templateUrl : 'views/portfolio.html',
+        controller : 'portfolioController',
+        css : 'css/portfolio.css'
+
     })
+        .when('/portfolio/comics',{
+            templateUrl : 'views/projects/comics.html',
+            css : 'css/projects/comics.css'
+        })
+        .when('/portfolio/invoicepro',{
+            templateUrl : 'views/projects/invoicepro.html',
+            css : 'css/projects/invoicepro.css'
+        })
     .when('/resume', {
-        templateUrl : 'pages/resume.html',
-        controller : 'resumeController'
+        templateUrl : 'views/resume.html',
+        controller : 'resumeController',
+        css : 'css/resume.css'
     })
     .otherwise({
         redirectTo : '/'
@@ -36,20 +46,21 @@ app.config(['$routeProvider',function($routeProvider){
 }]);
 
 app.controller('mainController',['$http','$sce', '$scope','$log','$filter','$location',function($http, $sce, $scope, $log,$filter,$location){
-    $scope.message = "Main controller";
-    $log.info($location.path());
+
 
 }]);
 app.controller('aboutController',['$http','$sce', '$scope','$log','$filter','$location',function($http, $sce, $scope, $log,$filter,$location){
-  $scope.message = "About Controller";
-  $log.info($location.path());
-
 }]);
 app.controller('contactController',['$http','$sce', '$scope','$log','$filter','$location',function($http, $sce, $scope, $log,$filter,$location){
-  $scope.message = "contactController Controller";
-  $log.info($location.path());
 }]);
 app.controller('portfolioController',['$http','$sce', '$scope','$log','$filter','$location',function($http, $sce, $scope, $log,$filter,$location){
 }]);
+
 app.controller('resumeController',['$http','$sce', '$scope','$log','$filter','$location',function($http, $sce, $scope, $log,$filter,$location){
+}]);
+
+app.controller('footerController',['$scope',function($scope){
+  var currentYear = new Date();
+  currentYear = currentYear.getFullYear();
+  $scope.currentYear = currentYear;
 }]);

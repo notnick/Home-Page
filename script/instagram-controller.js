@@ -1,4 +1,4 @@
-
+console.log("NOT READ");
 
 /*
 $(document).ready(function() {
