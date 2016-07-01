@@ -16,6 +16,16 @@
 }
 
 
+
+a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+}
+.click-here2 a, .click-here1 a{
+    color: inherit;
+    text-decoration: none;
+}
+
 .resume-read-content{
   width: 100%;
   height: 80%;

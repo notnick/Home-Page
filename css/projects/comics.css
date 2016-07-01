@@ -41,13 +41,8 @@ a:hover{
     box-shadow: 0px 0px 15px 0px #666,
               0px 5px 15px 0px #000;
 
-	background-image: url(../../img/comics-wireframe.jpg);
 
-	 -webkit-background-size: cover; /* For WebKit*/
-    -moz-background-size: cover;    /* Mozilla*/
-    -o-background-size: cover;      /* Opera*/
-    background-size: cover;         /* Generic*/
-   z-index: -1
+
 }
 .page-stages-box-2{
 	height: 240px;
@@ -58,6 +53,7 @@ a:hover{
 }
 .img-responsive{
 	height: 238px;
+  margin:0 auto;
 }
 
 .page-stages-box-3{
@@ -94,4 +90,11 @@ a:hover{
 
 .footer-box{
   position: relative;
+}
+
+
+.img-c{
+  width:auto;
+  height: 560px;
+  margin: 0 auto;
 }

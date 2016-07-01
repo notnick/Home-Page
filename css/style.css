@@ -232,7 +232,6 @@ hr {
 
 
 .fa-twitter-square:hover:before,.fa-linkedin-square:hover:before,.fa-envelope:hover:before {
-
    font-size: 16px;
    color:#19f6e8;
 }
@@ -329,7 +328,9 @@ hr {
   font-size: 22px;
   border-bottom: 2px solid #19f6e8;
 }
-
+.crumb{
+  font-size: 22px;
+}
 
 .cl-effect-16 a {
   outline: none;
