@@ -492,3 +492,49 @@ hr {
   -webkit-animation-name: bounceInDown;
   animation-name: bounceInDown;
 }
+
+
+
+/* ANIMATIONS
+============================================================================= */
+
+@keyframes slideOutLeft {
+    to      { transform: translateX(-100%); }
+}
+
+@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+
+@keyframes slideInUp {
+    from    { transform:translateY(100%); }
+    to      { transform: translateY(0); }
+}
+
+
+.ng-enter       { z-index: 8888; }
+.ng-leave       { z-index: 9999; }
+
+/*Apply to all pages at the same time  */
+/*
+.ng-enter           { animation: slideInRight 0.5s both ease-in; z-index: 8888; }
+.ng-leave           { animation: slideOutLeft 0.5s both ease-in; z-index: 9999; }
+
+*/
+
+/* WE HAVE page-class variable to each controller that is applied to ng-view div   */
+/*
+.page-about.ng-enter { animation:slideInRight 0.5s both ease-in; }
+.page-about.ng-leave { animation:slideOutLeft 0.5s both ease-in; }
+
+.page-contact.ng-leave  { animation:slideInRight 0.5s both ease-in; }
+.page-contact.ng-enter  { animation:slideOutLeft 0.5s both ease-in; }
+
+.page-portfolio.ng-leave  { animation:slideInRight 0.5s both ease-in; }
+.page-portfolio.ng-enter  { animation:slideOutLeft 0.5s both ease-in; }
+
+.page-resume.ng-leave  { animation:slideInRight 0.5s both ease-in; }
+.page-resume.ng-enter  { animation:slideOutLeft 0.5s both ease-in; }
+
+*/

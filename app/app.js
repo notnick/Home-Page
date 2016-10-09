@@ -45,6 +45,10 @@ app.config(['$routeProvider',function($routeProvider){
             templateUrl : 'views/projects/painter.html',
             css : 'css/projects/comics.css'
         })
+        .when('/portfolio/email',{
+            templateUrl : 'views/projects/email.html',
+            css : 'css/projects/email.css'
+        })
     .when('/resume', {
         templateUrl : 'views/resume.html',
         controller : 'resumeController',
@@ -63,16 +67,19 @@ app.config(['$routeProvider',function($routeProvider){
 }]);
 
 app.controller('mainController',['$http','$sce', '$scope','$log','$filter','$location',function($http, $sce, $scope, $log,$filter,$location){
-  $scope.message = "heella message!";
 }]);
 app.controller('aboutController',['$http','$sce', '$scope','$log','$filter','$location',function($http, $sce, $scope, $log,$filter,$location){
+  $scope.pageClass = 'page-about';
 }]);
 app.controller('contactController',['$http','$sce', '$scope','$log','$filter','$location',function($http, $sce, $scope, $log,$filter,$location){
+  $scope.pageClass = 'page-contact';
 }]);
 app.controller('portfolioController',['$http','$sce', '$scope','$log','$filter','$location',function($http, $sce, $scope, $log,$filter,$location){
+  $scope.pageClass = 'page-portfolio';
 }]);
 
 app.controller('resumeController',['$http','$sce', '$scope','$log','$filter','$location',function($http, $sce, $scope, $log,$filter,$location){
+  $scope.pageClass = 'page-resume';
 }]);
 
 app.controller('footerController',['$scope',function($scope){
