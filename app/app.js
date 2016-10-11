@@ -1,8 +1,8 @@
 
-var app = angular.module('homepage',['ngRoute','angularCSS']);
+var app = angular.module('homepage',['ngRoute','angularCSS', 'ngResource']);
 
 
-app.config(['$routeProvider',function($routeProvider){
+app.config(function($routeProvider,$locationProvider){
     $routeProvider
     .when('/',{
         templateUrl: 'views/home.html',
@@ -25,38 +25,49 @@ app.config(['$routeProvider',function($routeProvider){
         css : 'css/portfolio.css'
 
     })
-        .when('/portfolio/comics',{
-            templateUrl : 'views/projects/comics.html',
-            css : 'css/projects/comics.css'
-        })
-        .when('/portfolio/invoicepro',{
-            templateUrl : 'views/projects/invoicepro.html',
-            css : 'css/projects/invoicepro.css'
-        })
-        .when('/portfolio/euro2016',{
-            templateUrl : 'views/projects/euro2016.html',
-            css : 'css/projects/comics.css'
-        })
-        .when('/portfolio/fish-festival',{
-            templateUrl : 'views/projects/fish-festival.html',
-            css : 'css/projects/comics.css'
-        })
-        .when('/portfolio/painter',{
-            templateUrl : 'views/projects/painter.html',
-            css : 'css/projects/comics.css'
-        })
-        .when('/portfolio/email',{
-            templateUrl : 'views/projects/email.html',
-            css : 'css/projects/email.css'
-        })
     .when('/resume', {
         templateUrl : 'views/resume.html',
         controller : 'resumeController',
         css : 'css/resume.css'
     })
+
+        .when('/portfolio/comics',{
+            templateUrl : 'views/projects/comics.html',
+            css : 'css/comics.css'
+        })
+        .when('/portfolio/invoicepro',{
+            templateUrl : 'views/projects/invoicepro.html',
+            css : 'css/invoicepro.css'
+        })
+        .when('/portfolio/euro2016',{
+            templateUrl : 'views/projects/euro2016.html',
+            css : 'css/comics.css'
+        })
+        .when('/portfolio/fish-festival',{
+            templateUrl : 'views/projects/fish-festival.html',
+            css : 'css/comics.css'
+        })
+        .when('/portfolio/painter',{
+            templateUrl : 'views/projects/painter.html',
+            css : 'css/comics.css'
+        })
+        .when('/portfolio/email',{
+            templateUrl : 'views/projects/email.html',
+            css : 'css/email.css'
+        })
     .otherwise({
         redirectTo : '/'
     });
+
+
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    });
+
+
+    /*
+*/
     // Deep linkin doesnt work unless u rewrite htaccess file on the server!
     //,$locationProvider
     //$locationProvider.html5Mode(true);
@@ -64,7 +75,12 @@ app.config(['$routeProvider',function($routeProvider){
     //  enabled: true,
     //  requireBase: false
     //});
-}]);
+});
+
+
+app.run(function($rootScope) {
+  $rootScope.$on("$stateChangeError", console.log.bind(console));
+});
 
 app.controller('mainController',['$http','$sce', '$scope','$log','$filter','$location',function($http, $sce, $scope, $log,$filter,$location){
 }]);
