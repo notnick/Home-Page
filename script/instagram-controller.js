@@ -28,12 +28,11 @@ function validateXXX(){
 
 $(document).ready(function(){
 
-  console.log("Working , not?");
 
   var instaFeed = new Instafeed({
               get: 'user',
               userId: 2318655595,
-              accessToken: '2318655595.a0816c8.22d595779a9442ee92ad9dea1e3b1ea0',
+              accessToken: '2318655595.73542a8.379ed6304d8641b684a39cb71404601b',
               target: 'instafeed',
               sortBy: 'most-liked',
               limit: 100,
